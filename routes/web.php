@@ -12,5 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home.index');
+});
+
+
+/*
+ *
+ *	COURSES
+ *
+*/
+Route::get('course', function() {
+    return view('pages.courses.index');
 });
