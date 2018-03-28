@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('pages.home.index');
 });
 
+Route::get('login', function () {
+    return ('Login Page');
+});
+
 
 /*
  *
@@ -24,3 +28,7 @@ Route::get('/', function () {
 Route::get('course', function() {
     return view('pages.courses.index');
 });
+
+Route::get('{name}', function() {
+    return redirect('/');
+})->where('name', '[A-Za-z]+');
