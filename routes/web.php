@@ -19,12 +19,10 @@ Route::get('login', function () {
     return ('Login Page');
 });
 
+Route::get('signup', function () {
+    return ('Signup Page');
+});
 
-/*
- *
- *	COURSES
- *
-*/
 Route::get('course', function() {
     return view('pages.courses.index');
 });
