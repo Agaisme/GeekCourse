@@ -1,0 +1,43 @@
+Design Table GeekCourse
+
+
+Courses
+	- id
+	- name
+	- description
+	- thumbnail
+	- rating
+	- student_count
+	- price
+	- slug
+	- status
+	- category_id
+	- author_id
+
+Videos
+	- id
+	- title
+	- order
+	- path
+	- course_id
+
+Categories
+	- id
+	- name
+	- description
+	- slug
+	- parent_id
+
+Wishlist
+	- id 
+	- user_id
+	- course_id
+
+Course_User
+	- id
+	- course_id
+	- user-id
+	- price
+
+
+	

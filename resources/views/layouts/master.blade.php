@@ -14,21 +14,6 @@
         
     </head>
     <body>
-        <div id="app">
-            <Myheader></Myheader>
-
-            <div class="container is-widescreen">
-                <router-view></router-view>
-                
-                <div class="flex-center position-ref full-height">
-                    <div class="content">
-                        @yield('content')
-                    </div>
-                </div>
-            </div>
-
-            <Myfooter></Myfooter>
-        </div>
-        <script src="{{ asset('js/app.js') }}"></script>
+        @yield('content')
     </body>
 </html>

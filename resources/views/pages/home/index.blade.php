@@ -1,6 +1,6 @@
-@extends('layouts.master')
+@extends('pages.app')
 
-@section('content')
+@section('page-content')
 
 	<h2>Popular Course</h2>
 	<div class="columns">
