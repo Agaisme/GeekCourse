@@ -39,6 +39,8 @@ Course_User
 	- user-id
 	- price
 
+Role <<<<<<<<<
+
 
 Rule of Status
 ===============

@@ -19,8 +19,8 @@ class CreateCoursesTable extends Migration
             $table->string('slug', 80);
             $table->text('description')->nullable();
             $table->string('thumbnail')->nullable();
-            $table->float('rating');
-            $table->unsignedInteger('student_count');
+            $table->float('rating')->default(0);
+            $table->unsignedInteger('student_count')->nullable();
             $table->unsignedDecimal('price')->nullable();
             $table->unsignedTinyInteger('status')->default(0)->index();
             $table->unsignedInteger('category_id');
