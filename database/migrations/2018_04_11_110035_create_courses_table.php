@@ -17,12 +17,12 @@ class CreateCoursesTable extends Migration
             $table->increments('id');
             $table->string('title', 60);
             $table->string('slug', 80);
-            $table->text('description');
-            $table->string('thumbnail');
+            $table->text('description')->nullable();
+            $table->string('thumbnail')->nullable();
             $table->float('rating');
             $table->unsignedInteger('student_count');
-            $table->unsignedDecimal('price');
-            $table->unsignedTinyInteger('status');
+            $table->unsignedDecimal('price')->nullable();
+            $table->unsignedTinyInteger('status')->default(0)->index();
             $table->unsignedInteger('category_id');
             $table->unsignedInteger('author_id');
             $table->timestamps();
@@ -32,9 +32,9 @@ class CreateCoursesTable extends Migration
                 ->references('id')->on('categories')
                 ->onDelete('cascade');
 
-            /*$table->foreign('author_id')
-                ->references('id')->on('authors')
-                ->onDelete('cascade');*/
+            $table->foreign('author_id')
+                ->references('id')->on('users')
+                ->onDelete('cascade');
         });
     }
 

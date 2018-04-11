@@ -40,4 +40,10 @@ Course_User
 	- price
 
 
+Rule of Status
+===============
+0 Nothing
+1 Draft
+2 Published
+
 	
