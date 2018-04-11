@@ -22,10 +22,19 @@ class CreateCoursesTable extends Migration
             $table->float('rating');
             $table->unsignedInteger('student_count');
             $table->unsignedDecimal('price');
+            $table->unsignedTinyInteger('status');
             $table->unsignedInteger('category_id');
             $table->unsignedInteger('author_id');
-            $table->unsignedTinyInteger('status');
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->foreign('category_id')
+                ->references('id')->on('categories')
+                ->onDelete('cascade');
+
+            /*$table->foreign('author_id')
+                ->references('id')->on('authors')
+                ->onDelete('cascade');*/
         });
     }
 
