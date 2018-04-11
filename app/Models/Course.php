@@ -21,8 +21,20 @@ class Course extends Model
         "author_id",
     ];
 
-    public function categories()
+    public function category()
     {
-    	# code...
+        return $this->belongsTo(Category::class);
+    }
+    public function author()
+    {
+        return $this->belongsTo(User::class);
+    }
+    public function videos()
+    {
+        return $this->hasMany(Video::class);
+    }
+    public function wishlists()
+    {
+        return $this->hasMany(Wishlist::class);
     }
 }

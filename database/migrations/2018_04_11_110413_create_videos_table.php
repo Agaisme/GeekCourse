@@ -15,7 +15,7 @@ class CreateVideosTable extends Migration
     {
         Schema::create('videos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title', 80);
+            $table->string('title', 130);
             $table->string('path');
             $table->unsignedInteger('order')->nullable();
             $table->unsignedInteger('course_id');
